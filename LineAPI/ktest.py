@@ -1,10 +1,10 @@
 # YUKIESTREETBOT
 # KHIE WAS HERE
-from LineAPI.linepy import *
-from LineAPI.akad.ttypes import Message
-from LineAPI.akad.ttypes import ContentType as Type
-from LineAPI.akad.ttypes import ChatRoomAnnouncementContents
-from LineAPI.akad.ttypes import ChatRoomAnnouncement
+from linepy import *
+from akad.ttypes import Message
+from akad.ttypes import ContentType as Type
+from akad.ttypes import ChatRoomAnnouncementContents
+from akad.ttypes import ChatRoomAnnouncement
 from datetime import datetime, timedelta
 from time import sleep
 from bs4 import BeautifulSoup
