@@ -5407,7 +5407,6 @@ def RECEIVE_MESSAGE(op):
 def atend():
     with open("Log_data.json","w",encoding='utf8') as f:
         json.dump(msg_dict, f, ensure_ascii=False, indent=4,separators=(',', ': '))
-atexit.register(atend)
 def restartBot():
     print ("[ INFO ] BOT RESETTED")
     backupData()
