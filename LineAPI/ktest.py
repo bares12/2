@@ -16,7 +16,7 @@ from googletrans import Translator
 #==============================================================================================================
 botStart = time.time()
 #==============================================================================================================
-client = LINE ("EuUDOUgIh32Jz9q8q0H5.AlX52OlquZ/xf9hszTyZnq.npLxBS1S2d6nKfwSAW3ddirkoofbyTgxLGfo2GM/J/g=")
+client = LINE ()
 #==============================================================================================================
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -33,9 +33,9 @@ clientSettings = client.getSettings()
 #==============================================================================================================
 clientPoll = OEPoll(client)
 #==============================================================================================================
-admin = "u68bc79da82d0533f9717d1d266d63335"
-owner = "u68bc79da82d0533f9717d1d266d63335"
-Bots=[mid,"u68bc79da82d0533f9717d1d266d63335"]
+admin = "ube187443474747c3ec352e7efeb48c1b"
+owner = "ube187443474747c3ec352e7efeb48c1b"
+Bots=[mid,"ube187443474747c3ec352e7efeb48c1b"]
 #==============================================================================================================
 #==============================================================================================================
 contact = client.getProfile()
@@ -208,8 +208,8 @@ def command(text):
         cmd = "Undefined command"
     return cmd
 #==============================================================================================================
-helpmsg ="""YUKIE STREET BOTS
-
+helpmsg ="""
+[~MENU BOTS~[...]
 Me
 Mymid
 Mystickers
@@ -232,7 +232,7 @@ Cover「@」
 Getid「@」
 Getid「Pm」
 
-Media Command :
+[~MEDIA BOTS[...]
 
 Line「idline」
 Calc「num」
@@ -282,7 +282,7 @@ Whois「name」
 Status「name」
 Timezone「locate」
 
-Group Command :
+[~GROUP BOTS[...]
 
 Ats
 Ticket
@@ -347,7 +347,7 @@ Setread1「text」
 Setread2「text」
 Reader on/off
 
-Settings Command :
+[~SETTING BOTS[...]
 
 Status
 Detailuser on/off
@@ -368,7 +368,7 @@ Notag on/off
 Antisticker on/off
 Getreader on/off
 
-Message set command :
+[~MESSAGE BOTS[...]
 
 Addgetreadersticker
 Delgetreadersticker
@@ -394,13 +394,14 @@ Welcomemessage
 Addwelcomesticker
 Delwelcomesticker
 Setwelcomemsg:「text」
+"""
 
-HAPPY FUCKIN DAY \m/"""
 helpmusic ="""「 Music 」
 
 • Key:  Music「query」
 • Detail Music
 • Key:  Music 「query | num 」"""
+
 helpbio ="""「 Biography 」
 
 • Key:  Biography「query」
@@ -2123,7 +2124,7 @@ def lineBot(op):
                             settings["restartPoint"] = to
                             restartBot()
                         elif cmd == "me" or cmd == "tes":
-                            client.sendMentionFooter(to, '「Me」\n', sender, "https://line.me/ti/p/~yukie2k18", "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName);client.sendMessage(to, client.getContact(sender).displayName, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+client.getContact(sender).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~yukie2k18', 'type': 'mt', 'subText': "Khie Bot", 'a-installUrl': 'https://line.me/ti/p/~yukie2k18', 'a-installUrl': ' https://line.me/ti/p/~yukie2k18', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~yukie2k18', 'i-linkUri': 'https://line.me/ti/p/~yukie2k18', 'id': 'mt000000000a6b79f9', 'text': 'Khie', 'linkUri': 'https://line.me/ti/p/~yukie2k18'}, contentType=19)
+                            client.sendMentionFooter(to, '「Me」\n', sender, "https://line.me/ti/p/~situ.sehat", "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName);client.sendMessage(to, client.getContact(sender).displayName, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+client.getContact(sender).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~situ.sehat', 'type': 'mt', 'subText': "Khie Bot", 'a-installUrl': 'https://line.me/ti/p/~situ.sehat', 'a-installUrl': ' https://line.me/ti/p/~situ.sehat', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~situ.sehat', 'i-linkUri': 'https://line.me/ti/p/~situ.sehat', 'id': 'mt000000000a6b79f9', 'text': 'Khie', 'linkUri': 'https://line.me/ti/p/~situ.sehat'}, contentType=19)
                         elif cmd == "yabi":
                             userid = "https://line.me/ti/p/~" + client.profile.userid
                             client.sendImageWithFooter(to, "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, str(userid), "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName)
@@ -3961,7 +3962,7 @@ def lineBot(op):
                             client.sendMessage(to, "success")
                         elif cmd == "makers" or cmd == "creator":
                             sendMention(to, sender, "「 Auto Mentions 」\n•", "\nThis is my Creator..")
-                            client.sendContact(to, "uaca55463c423c3632012598148691da7")
+                            client.sendContact(to, "ube187443474747c3ec352e7efeb48c1b")
                         elif cmd == " name" or cmd == "name":
                             h = client.getContact(clientMID)
                             sendMention(to, sender, "「 Auto Mention 」\n•", "\nDisplay Name : \n" + str(h.displayName))
@@ -4239,8 +4240,8 @@ def lineBot(op):
                         elif cmd == " about" or cmd == "about":
                             try:
                                 arr = []
-                                owner = "ufc6d985e53fcf4ae5436354406ce408c"
-                                khietag = "ufc6d985e53fcf4ae5436354406ce408c"                        
+                                owner = "ube187443474747c3ec352e7efeb48c1b"
+                                khietag = "ube187443474747c3ec352e7efeb48c1b"                        
              #                   creator = client.getContact(owner)
                                 contact = client.getContact(clientMID)
                                 grouplist = client.getGroupIdsJoined()
@@ -5252,7 +5253,7 @@ def cium(to, nama):
     strt = int(0)
     akh = int(0)
     nm = nama
-    myid = "uaca55463c423c3632012598148691da7"
+    myid = "ube187443474747c3ec352e7efeb48c1b"
     if myid in nm:    
       nm.remove(myid)
     #print nm
